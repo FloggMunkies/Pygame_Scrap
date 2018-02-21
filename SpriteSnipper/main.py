@@ -12,6 +12,7 @@ reader.canvas = tk.Canvas(reader.frame, width=640, height=480, scrollregion=(0, 
 reader.on_init(start=False)
 reader.canvas.config(width=640, height=480)
 reader.canvas.config(xscrollcommand=reader.hbar.set, yscrollcommand=reader.vbar.set)
+reader.canvas.configure(scrollregion=reader.canvas.bbox("all"))
 reader.canvas.pack(side=tk.LEFT, expand=True, fill=tk.BOTH)
 
 # Substitute for root.mainloop but without blocking
